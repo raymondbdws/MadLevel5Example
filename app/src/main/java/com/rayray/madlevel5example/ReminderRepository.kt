@@ -1,6 +1,8 @@
 package com.rayray.madlevel5example
 
 import android.content.Context
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 
 class ReminderRepository(context: Context) {
 
@@ -11,8 +13,9 @@ class ReminderRepository(context: Context) {
         reminderDao = reminderRoomDatabase!!.reminderDao()
     }
 
-    fun getAllReminders(): List<Reminder>{
-        return reminderDao.getAllReminders()
+    fun getAllReminders(): LiveData<List<Reminder>> {
+        return reminderDao.getAllReminders() ?:
+                MutableLiveData(emptyList())
     }
 
     fun insertReminder(reminder: Reminder){
