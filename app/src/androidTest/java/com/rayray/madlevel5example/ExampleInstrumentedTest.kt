@@ -1,4 +1,4 @@
-package com.rayray.madlevel4example
+package com.rayray.madlevel5example
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
