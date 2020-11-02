@@ -1,0 +1,11 @@
+ What are the parts that Android Architecture Components consist of?
+activities, fragments, services, content providers and broadcast receivers.
+
+Which design principle is followed by the Android Architecture Components?
+separation of concerns and Drive UI from model?
+ 
+What is the purpose of LiveData?
+Monitor changes to objects without creating explicit and rigid dependencys paths between them. It also respects the lifecycle stat of the app component.
+
+What is the purpose of a ViewModel?
+Provides data for specific UI component eg. fragments or activities. It can be called from other components
